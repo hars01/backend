@@ -1,26 +1,8 @@
-<!-- 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://hiharshTech:Harsh@123@cluster0.qvlxuci.mongodb.net/?appName=Cluster0";
+ => bcrypt vs brypt.js -> ye hamare password ko hash me badalne ka kaam karta hai
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
 
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir); -->
+
+=> JWT -> ek token banata hai jo cryptography ke kaam me aata hai like secret base 64 encoded
+      -> ye bearer token hota hai thik chabhi ki tarah 
+      -> jo eshko bear karta hai ushko hum sahi man lete hai hai jaise ki jo bhi n=hume ye bhejega ushko hum data bhej denge
+
