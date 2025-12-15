@@ -5,3 +5,5 @@ const registerUser = asyncHandler(async (req, res, next) => {
         message: "Register User Route"
     });
 });
+
+export { registerUser }
