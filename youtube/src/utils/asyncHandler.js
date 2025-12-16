@@ -14,11 +14,11 @@
 
 
 //  BY USE OF PROMISE FUNCTION WE CAN HANDLE ERROR GLOBALLY
-const asyncHandeler = (requestHandeler) => {
+const asyncHandler = (requestHandeler) => {
     return (req, res, next) => {
         Promise.resolve(requestHandeler(req, res, next)).catch((err)=>next(err))
     }
 }
 
 
-export { asyncHandeler }
+export { asyncHandler }

@@ -53,7 +53,7 @@ const userSchema = new Schema(
 //'next' ish liye use ho raha hai ki flag milne me next call kar ke ushko aage pass karde
 userSchema.pre("save", async function(next) {
     if(!this.isModified("password")) return next(); //yaha pe hum check karenge ki jo password hai woh madified hua hai ki nahi agar nahi hua rahega toh bina encrypt kiye ushko bahar kardenge
-    this.password = bcrypt.hash(this.password, 10) // ishka matlab hai ki ye password ko encrypt karega hash() ke jariye jaha hum jisko hash karna hai woh(this.password) pass karte hai aur jo 10 hai woh round hota hai
+    this.password = await bcrypt.hash(this.password, 10) // ishka matlab hai ki ye password ko encrypt karega hash() ke jariye jaha hum jisko hash karna hai woh(this.password) pass karte hai aur jo 10 hai woh round hota hai
     next()
 })
 
