@@ -12,5 +12,5 @@ const storage = multer.diskStorage({
 }) // ye memory me file ko store karega
 
 export const upload = multer({ 
-    storage, 
- });
+    storage
+});
